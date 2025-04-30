@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Money Map Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+</head>
+<body>
+
+<div id="top-bar">
+  <button id="add-node-btn">+ Add Node</button>
+  <button id="save-map-btn">Save Map</button>
+  <input type="file" id="load-map-input" style="display:none;">
+  <button id="load-map-btn">Load Map</button>
+</div>
+
+<div id="network"></div>
+
+<!-- Add Node Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="close-modal" class="close">&times;</span>
+    <h2>Add Node</h2>
+    <input type="text" id="node-label" placeholder="Node Title">
+    <select id="node-group">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+      <option value="investment">Investment</option>
+      <option value="dead">Dead/Neutral</option>
+    </select>
+    <input type="text" id="node-url" placeholder="Optional Link (https://)">
+    <button id="create-node-btn">Create Node</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
