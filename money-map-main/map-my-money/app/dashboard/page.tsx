@@ -12,10 +12,12 @@ export default async function DashboardPage() {
     redirect('/auth/login');
   }
 
+export default function HomePage() {
   return (
-    <div>
-      <h1>Your Dashboard</h1>
-      <GraphEditor />
+    <div style={{ padding: '40px' }}>
+      <h1>Welcome to Map My Money</h1>
+      <p><a href="/auth/login">Log in</a> or <a href="/auth/signup">Sign up</a> to begin mapping your finances.</p>
     </div>
   );
 }
+
